@@ -22,12 +22,12 @@ export default siteConfig({
   // -------------------------------------------------------------------------
   // 소셜 링크 (오류 방지를 위해 비워둡니다)
   // -------------------------------------------------------------------------
-  twitter: null,
-  github: null,
-  linkedin: null,
-  mastodon: null,
-  newsletter: null,
-  youtube: null,
+  //twitter: null,
+  //github: null,
+  //linkedin: null,
+  //mastodon: null,
+  //newsletter: null,
+  //youtube: null,
 
   // -------------------------------------------------------------------------
   // 디자인 및 기능 설정

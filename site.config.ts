@@ -41,7 +41,7 @@ export default siteConfig({
   defaultPageCoverPosition: 0.5,
 
   // 이미지 미리보기 기능 활성화 (로딩 속도 체감 향상)
-  isPreviewImageSupportEnabled: true,
+  isPreviewImageSupportEnabled: false,
 
   // Redis 캐싱 (초보자에게는 설정이 복잡하므로 끕니다)
   isRedisEnabled: false,

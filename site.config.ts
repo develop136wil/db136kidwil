@@ -27,9 +27,9 @@ export default siteConfig({
   // 4. 소셜 링크 (불필요한 개인 링크는 제거했습니다)
   // 필요 없다면 null로 두어야 사이트 하단이 깔끔해집니다.
   // -------------------------------------------------------------------------
-  twitter: null,
-  github: null,
-  linkedin: null,
+  //twitter: null,
+  //github: null,
+  //linkedin: null,
   // newsletter: '#', // 뉴스레터가 있다면 주석을 풀고 입력
   // youtube: '#',    // 유튜브가 있다면 주석을 풀고 입력
 

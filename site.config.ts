@@ -1,55 +1,59 @@
 import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
-  // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  // -------------------------------------------------------------------------
+  // 1. [가장 중요] 여기에 선생님의 원본 노션 페이지 ID를 넣어야 합니다.
+  // 아까 Super.so에 연결했던 그 페이지의 32자리 ID를 복사해서 아래 따옴표 안에 넣으세요.
+  // (예: '2738ade50210807088b5e5ca72f833b1' -> 본인 ID로 교체 필수!)
+  // -------------------------------------------------------------------------
+  rootNotionPageId: '2738ade50210807088b5e5ca72f833b1',
 
-  // if you want to restrict pages to a single notion workspace (optional)
-  // (this should be a Notion ID; see the docs for how to extract this)
+  // 노션 워크스페이스 ID (보통 null로 두면 됩니다)
   rootNotionSpaceId: null,
 
-  // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  // -------------------------------------------------------------------------
+  // 2. 사이트 기본 정보 (한글로 수정했습니다)
+  // -------------------------------------------------------------------------
+  name: '도봉구 영유아 복지정보자료집',
+  domain: 'dobong-child-welfare.vercel.app', // 나중에 실제 배포 후 주소가 확정되면 그때 바꿔도 됩니다.
+  author: '발달136 센터', // 선생님의 활동명이나 센터 이름
 
-  // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  // -------------------------------------------------------------------------
+  // 3. 사이트 설명 (네이버, 구글 검색 및 카톡 공유시 뜨는 설명글)
+  // -------------------------------------------------------------------------
+  description: '도봉구 영유아 및 양육자를 위한 종합 발달 복지 정보, 병원, 치료기관, 어린이집 안내',
 
-  // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
-  // mastodon: '#', // optional mastodon profile URL, provides link verification
-  // newsletter: '#', // optional newsletter URL
-  // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
+  // -------------------------------------------------------------------------
+  // 4. 소셜 링크 (불필요한 개인 링크는 제거했습니다)
+  // 필요 없다면 null로 두어야 사이트 하단이 깔끔해집니다.
+  // -------------------------------------------------------------------------
+  twitter: null,
+  github: null,
+  linkedin: null,
+  // newsletter: '#', // 뉴스레터가 있다면 주석을 풀고 입력
+  // youtube: '#',    // 유튜브가 있다면 주석을 풀고 입력
 
-  // default notion icon and cover images for site-wide consistency (optional)
-  // page-specific values will override these site-wide defaults
+  // -------------------------------------------------------------------------
+  // 5. 디자인 설정 (노션 원본 설정을 따르도록 null 유지)
+  // -------------------------------------------------------------------------
   defaultPageIcon: null,
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
-  // whether or not to enable support for LQIP preview images (optional)
+  // 이미지 미리보기 기능 활성화 (로딩 속도 체감 향상)
   isPreviewImageSupportEnabled: true,
 
-  // whether or not redis is enabled for caching generated preview images (optional)
-  // NOTE: if you enable redis, you need to set the `REDIS_HOST` and `REDIS_PASSWORD`
-  // environment variables. see the readme for more info
+  // Redis 캐싱 (초보자에게는 설정이 복잡하므로 끕니다)
   isRedisEnabled: false,
 
-  // map of notion page IDs to URL paths (optional)
-  // any pages defined here will override their default URL paths
-  // example:
-  //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
+  // 특정 페이지 주소 줄이기 (일단 비워둡니다)
   pageUrlOverrides: null,
 
-  // whether to use the default notion navigation style or a custom one with links to
-  // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
+  // -------------------------------------------------------------------------
+  // 6. 네비게이션 바 (상단 메뉴) 설정
+  // 일단 'default'로 설정해서 배포를 먼저 성공시킵니다.
+  // 배포 성공 후, 원하시면 'custom'으로 바꿔서 메뉴 버튼을 추가할 수 있습니다.
+  // -------------------------------------------------------------------------
   navigationStyle: 'default'
   // navigationStyle: 'custom',
   // navigationLinks: [
